@@ -1,0 +1,22 @@
+.pk-auth-container{
+  background: linear-gradient(
+    135deg,
+    rgba(20, 38, 27, 0.88),
+    rgba(31, 61, 43, 0.75)
+  ), url("../../assets/login-page-background-image.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 76px);
+  display: flex;
+  align-items: center;
+}
+
+.pk-auth-card{
+  border: none;
+}
+
+.pk-auth-title{
+  font-family: var(--pk-font-heading);
+  color: var(--pk-green-800);
+}
