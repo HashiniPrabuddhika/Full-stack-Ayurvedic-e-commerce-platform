@@ -133,7 +133,7 @@ Line items, quantity controls, and order summary sidebar.
 District/city delivery form and Cash on Delivery vs online payment selector.
  
 **contact**
-![My orders](screenshots/contact.png)
+![My orders](docs/screenshots/contact.png)
 contact details
  
 **Admin — Add Product**
@@ -144,7 +144,3 @@ Image upload, category dropdown, and product form.
 ![Admin product list](docs/screenshots/admin-product-list.png)
 Themed table with delete confirmation.
 
-
-## Demo Video
-
-_Add a link or embed here once recorded._
