@@ -1,0 +1,25 @@
+.pk-newsletter{
+  background: linear-gradient(135deg, var(--pk-green-800), var(--pk-green-900));
+}
+.pk-newsletter .pk-section-title{ color: #fff; margin-top: 0.5rem; }
+
+.pk-newsletter-form{
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 420px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+.pk-newsletter-form input{
+  flex: 1;
+  min-width: 220px;
+  padding: 0.7rem 1rem;
+  border-radius: 999px;
+  border: none;
+  outline: none;
+}
+.pk-newsletter-form button{
+  border-radius: 999px;
+  padding: 0.7rem 1.6rem;
+}
