@@ -1,0 +1,198 @@
+.pk-hero{
+  position: relative;
+  overflow: hidden;
+  padding: 4.5rem 0 3.5rem;
+  min-height: 620px;
+  display: flex;
+  align-items: center;
+  background: var(--pk-green-900); /* shows briefly before video paints */
+}
+
+.pk-hero-video-bg{
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+/* Strong scrim behind the text (left), fading out by mid-page so the
+   video stays clearly visible on the right where the leaf card sits */
+.pk-hero-overlay{
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background: linear-gradient(
+    100deg,
+    rgba(15, 30, 20, 0.82) 0%,
+    rgba(15, 30, 20, 0.68) 30%,
+    rgba(15, 30, 20, 0.4) 50%,
+    rgba(15, 30, 20, 0.1) 68%,
+    rgba(15, 30, 20, 0) 82%
+  );
+}
+
+.pk-hero .container{
+  position: relative;
+  z-index: 2;
+}
+
+/* ---------- Text: switched to light colors + shadow so it pops
+   off the video instead of blending into bright footage ---------- */
+.pk-eyebrow{
+  color: var(--pk-gold-500) !important;
+  background: rgba(0,0,0,0.25);
+  padding: 0.35rem 0.9rem;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  backdrop-filter: blur(4px);
+}
+
+.pk-hero-title{
+  font-family: var(--pk-font-heading);
+  font-size: 3rem;
+  line-height: 1.15;
+  color: #FFFDF8;
+  margin-top: 0.9rem;
+  text-shadow: 0 2px 18px rgba(0,0,0,0.35);
+}
+
+.pk-hero-title-accent{
+  background: linear-gradient(90deg, var(--pk-terracotta-500), var(--pk-gold-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.pk-hero-sinhala{
+  font-size: 1.05rem;
+  color: var(--pk-gold-500);
+  margin: 0.6rem 0 0;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-shadow: 0 1px 8px rgba(0,0,0,0.35);
+}
+.pk-hero-sinhala::before{
+  content: "";
+  width: 22px;
+  height: 2px;
+  background: linear-gradient(90deg, var(--pk-gold-500), transparent);
+  display: inline-block;
+}
+
+.pk-hero-sub{
+  font-size: 1.1rem;
+  color: rgba(255, 253, 248, 0.9);
+  max-width: 520px;
+  margin-top: 1rem;
+  text-shadow: 0 1px 10px rgba(0,0,0,0.3);
+}
+
+/* Buttons: outline button needs to switch to a light outline to
+   read against dark video instead of a near-invisible dark outline */
+.pk-hero .btn-outline-dark{
+  color: #FFFDF8;
+  border-color: rgba(255,253,248,0.8);
+}
+.pk-hero .btn-outline-dark:hover{
+  background-color: #FFFDF8;
+  color: var(--pk-green-900);
+}
+
+.pk-hero-stats{
+  border-top: 1px solid rgba(255,255,255,0.25);
+  padding-top: 1.5rem;
+}
+.pk-hero-stats div{
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease;
+}
+.pk-hero-stats div:hover{
+  transform: translateY(-3px);
+}
+.pk-hero-stats strong{
+  font-family: var(--pk-font-heading);
+  font-size: 1.7rem;
+  background: linear-gradient(90deg, #FFFDF8, var(--pk-gold-500));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.pk-hero-stats span{
+  font-size: 0.8rem;
+  color: rgba(255,253,248,0.75);
+  text-transform: uppercase;
+  letter-spacing: .05em;
+}
+
+/* ---------- Right side visual card: unchanged, still reads
+   clearly since it already has its own dark background ---------- */
+.pk-hero-visual{
+  position: relative;
+  aspect-ratio: 4 / 4.6;
+  max-width: 320px;
+  margin: 0 auto;
+  border-radius: 28px;
+  background: radial-gradient(ellipse at 30% 20%, rgba(193,98,45,0.18), transparent 55%),
+              linear-gradient(150deg, var(--pk-green-800), var(--pk-green-900));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.35);
+}
+
+.pk-hero-visual img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 28px;
+}
+
+.pk-hero-botanical{
+  width: 80%;
+  height: 80%;
+}
+
+.pk-hero-badge{
+  position: absolute;
+  bottom: -22px;
+  left: -22px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: var(--pk-shadow-card);
+  padding: 0.8rem 1.1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  animation: pk-badge-float 3.5s ease-in-out infinite;
+}
+
+@keyframes pk-badge-float{
+  0%, 100%{ transform: translateY(0); }
+  50%{ transform: translateY(-8px); }
+}
+.pk-hero-badge i{
+  color: var(--pk-terracotta-600);
+  font-size: 1.6rem;
+}
+.pk-hero-badge strong{
+  display: block;
+  font-size: 0.85rem;
+  color: var(--pk-green-800);
+}
+.pk-hero-badge span{
+  font-size: 0.72rem;
+  color: var(--pk-text-600);
+}
+
+@media (max-width: 991px){
+  .pk-hero{ min-height: 560px; padding: 5rem 0 4rem; }
+  .pk-hero-title{ font-size: 2.2rem; }
+  .pk-hero-visual{ margin-top: 2rem; }
+}
