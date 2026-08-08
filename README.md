@@ -52,7 +52,7 @@ There's no Docker Compose file yet — see [Roadmap](#roadmap) below — so each
 **Other commands:**
 
 ```bash
-# populate sample products across all 8 categories
+
 mongosh "mongodb+srv://<user>:<password>@<cluster-url>/deliverydb" seed-products.js
 ```
 
@@ -60,7 +60,6 @@ mongosh "mongodb+srv://<user>:<password>@<cluster-url>/deliverydb" seed-products
 
 No credentials should be committed. `spring.data.mongodb.uri`, `jwt.secret`, `cloudinary.*`, and `stripe.secret.key` belong in `application.properties` locally, or better, as environment variables / a `.env` file excluded via `.gitignore`.
 
-> ⚠️ The current codebase, as inherited, had a live MongoDB Atlas username and password committed in plain text — that's flagged here as a known issue, not a design decision, and should be rotated before this repo goes anywhere public.
 
 ## Features Implemented
 
@@ -81,13 +80,12 @@ No credentials should be committed. `spring.data.mongodb.uri`, `jwt.secret`, `cl
 
 `FoodEntity.category` is a plain `String`, and the frontend's category list lives in one array (`assests.js`) rather than being baked into validation logic anywhere. Swapping "Biryani/Pizza/Burger" for "Leaves/Flowers/Roots/..." required editing that one array and the admin's dropdown — zero backend changes, zero schema migration.
 
-> **Alternative considered:** an enum or a fixed set of category constants — safer against typos, but every new category (or, here, every full rebrand) becomes a code change and a redeploy instead of a data edit. Free text was already the existing contract, so extending it was the lower-risk move.
 
 ### Payment method branching happens server-side, not just in the UI
 
 Before this project, every order — regardless of what the frontend showed — got a Stripe payment link, because `OrderServiceImpl.createOrderWithPayments()` didn't check for one. Adding a `paymentMethod` field, and branching so Cash on Delivery orders skip Stripe link creation entirely and confirm immediately, was necessary for the frontend's COD option to be more than cosmetic.
 
-> **Alternative considered:** faking it — showing a COD radio button and quietly sending every order through Stripe anyway. Rejected: it would mean every "Cash on Delivery" order silently redirected to a card payment page, which is worse than not offering COD at all.
+
 
 ### District as a fixed dropdown, city as free text
 
@@ -115,35 +113,37 @@ The inherited project had food-photo PNGs (`burger.png`, `pizza.png`, etc.) with
 ## Screenshots
 
 **Homepage**
-![Homepage](screenshots/homepage.png)
+![Homepage](docs/screenshots/homepage.png)
 Hero section with Ayurvedic branding, trust badges, and category chips below.
  
 **Shop / Explore**
-![Shop page](screenshots/shop.png)
+![Shop page](docs/screenshots/shop.png)
+
+![Shop page](docs/screenshots/shop1.png)
 Category filter, search bar, and paginated product grid.
  
 **Product Detail**
-![Product detail](screenshots/product-detail.png)
+![Product detail](docs/screenshots/product-detail.png)
 Full product view with rating, price, and add-to-cart.
  
 **Cart**
-![Cart](screenshots/cart.png)
+![Cart](docs/screenshots/cart.png)
 Line items, quantity controls, and order summary sidebar.
  
 **Checkout**
-![Checkout](screenshots/checkout.png)
+![Checkout](docs/screenshots/checkout.png)
 District/city delivery form and Cash on Delivery vs online payment selector.
  
-**My Orders**
-![My orders](screenshots/my-orders.png)
-Order history table with payment method and status badges.
+**contact**
+![My orders](screenshots/contact.png)
+contact details
  
 **Admin — Add Product**
-![Admin add product](screenshots/admin-add-product.png)
+![Admin add product](docs/screenshots/admin-add-product.png)
 Image upload, category dropdown, and product form.
  
 **Admin — Product List**
-![Admin product list](screenshots/admin-product-list.png)
+![Admin product list](docs/screenshots/admin-product-list.png)
 Themed table with delete confirmation.
 
 
