@@ -27,7 +27,7 @@ The app has three parts: a customer-facing storefront, an admin panel, and a Spr
 ## Running Locally
 
 ```bash
-git clone https://github.com/<your-username>/prakruti-ayurveda.git
+git clone https://github.com/HashiniPrabuddhika/Full-stack-Ayurvedic-e-commerce-platform.git
 
 cd prakruti-ayurveda/foddiesapi
 ./mvnw spring-boot:run
@@ -45,9 +45,7 @@ npm install
 npm run dev
 ```
 
-The backend runs at `http://localhost:8080`, the storefront at `http://localhost:5173`, and the admin panel on its own Vite port (check the terminal output).
-
-There's no Docker Compose file yet — see [Roadmap](#roadmap) below — so each of the three parts is started separately, in the order above, since the frontends expect the API to already be reachable.
+The backend runs at `http://localhost:8080`, the storefront at `http://localhost:5173`, and the admin panel on its own Vite port.
 
 **Other commands:**
 
