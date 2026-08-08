@@ -1,0 +1,45 @@
+.pk-count-badge{
+  background-color: var(--pk-green-100);
+  color: var(--pk-green-800);
+  font-weight: 600;
+  padding: 0.5rem 0.9rem;
+  border-radius: 999px;
+}
+
+.pk-product-table td{
+  vertical-align: middle;
+  padding: 0.9rem 1rem;
+}
+
+.pk-product-table thead th{
+  background-color: var(--pk-cream-200);
+  color: var(--pk-green-800);
+  font-weight: 600;
+  border-bottom: none;
+  padding: 0.9rem 1rem;
+}
+
+.pk-thumb{
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.pk-category-pill{
+  background-color: var(--pk-gold-500);
+  color: #fff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 0.3rem 0.7rem;
+  border-radius: 999px;
+}
+
+.pk-delete-icon{
+  color: var(--pk-maroon-700);
+  cursor: pointer;
+  font-size: 1.05rem;
+  transition: transform .15s ease;
+}
+
+.pk-delete-icon:hover{
+  transform: scale(1.15);
+}
