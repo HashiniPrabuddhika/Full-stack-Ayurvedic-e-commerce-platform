@@ -1,0 +1,36 @@
+.pk-story{
+  background-color: #fff;
+}
+
+.pk-story-visual{
+  aspect-ratio: 1 / 1;
+  border-radius: var(--pk-radius);
+  background: radial-gradient(ellipse at 70% 30%, rgba(61,122,76,0.25), transparent 55%),
+              linear-gradient(160deg, var(--pk-terracotta-100), var(--pk-cream-200));
+  box-shadow: var(--pk-shadow-soft);
+  overflow: hidden;
+}
+
+.pk-story-visual img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.pk-story-text{
+  color: var(--pk-text-600);
+  line-height: 1.7;
+}
+
+.pk-story .row strong{
+  display: block;
+  font-family: var(--pk-font-heading);
+  font-size: 1.4rem;
+  color: var(--pk-green-800);
+}
+.pk-story .row span{
+  font-size: 0.75rem;
+  color: var(--pk-text-600);
+  text-transform: uppercase;
+  letter-spacing: .04em;
+}
