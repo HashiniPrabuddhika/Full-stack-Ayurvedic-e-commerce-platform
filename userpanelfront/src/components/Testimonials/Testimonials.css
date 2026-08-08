@@ -1,0 +1,32 @@
+.pk-reviews{
+  background-color: var(--pk-green-900);
+}
+.pk-reviews .pk-eyebrow{ color: var(--pk-gold-500); }
+.pk-reviews .pk-section-title{ color: #fff; }
+
+.pk-review-card{
+  background: rgba(255,255,255,0.06);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: var(--pk-radius);
+  padding: 1.75rem;
+  height: 100%;
+  color: rgba(255,255,255,0.85);
+}
+.pk-review-stars i{
+  color: var(--pk-gold-500);
+  font-size: 0.9rem;
+  margin-right: 2px;
+}
+.pk-review-card p{
+  font-style: italic;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+.pk-review-card strong{
+  display: block;
+  color: #fff;
+}
+.pk-review-card span{
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.5);
+}
