@@ -1,0 +1,39 @@
+.pk-cart-card,
+.pk-cart-summary{
+  border: 1px solid var(--pk-cream-300);
+  border-radius: var(--pk-radius);
+  box-shadow: var(--pk-shadow-soft);
+}
+
+.pk-cart-summary{
+  background-color: var(--pk-cream-200);
+  position: sticky;
+  top: 90px;
+}
+
+.cart-item img,
+.pk-cart-thumb {
+  max-width: 100px;
+  height: auto;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.quantity-input {
+  width: 50px;
+}
+
+.pk-cart-line-price{
+  color: var(--pk-maroon-700);
+}
+
+.pk-cart-total{
+  color: var(--pk-maroon-700);
+  font-size: 1.15rem;
+}
+
+.pk-empty-cart{
+  border: 1px dashed var(--pk-cream-300);
+  border-radius: var(--pk-radius);
+  background-color: #fff;
+}

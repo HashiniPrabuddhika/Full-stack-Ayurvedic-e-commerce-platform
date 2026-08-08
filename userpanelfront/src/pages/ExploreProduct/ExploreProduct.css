@@ -1,0 +1,17 @@
+.pk-explore-header{
+  padding-top: 2.5rem;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+.pk-search-group .form-select,
+.pk-search-group .form-control{
+  border-color: var(--pk-cream-300);
+  padding: 0.65rem 0.9rem;
+}
+
+.pk-search-group .form-select:focus,
+.pk-search-group .form-control:focus{
+  box-shadow: 0 0 0 0.2rem var(--pk-green-100);
+  border-color: var(--pk-green-600);
+}

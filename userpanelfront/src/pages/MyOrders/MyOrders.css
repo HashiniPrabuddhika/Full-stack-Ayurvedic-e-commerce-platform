@@ -1,0 +1,35 @@
+.pk-orders-card{
+  border: 1px solid var(--pk-cream-300);
+  border-radius: var(--pk-radius);
+  box-shadow: var(--pk-shadow-soft);
+  overflow: hidden;
+}
+
+.pk-orders-table thead{
+  background-color: var(--pk-cream-200);
+}
+
+.pk-orders-table th{
+  color: var(--pk-green-800);
+  font-weight: 600;
+  border-bottom: none;
+}
+
+.pk-orders-table td {
+  vertical-align: middle;
+}
+
+.pk-order-icon{
+  background-color: var(--pk-green-100);
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pk-status-delivered{ background-color: var(--pk-green-700); }
+.pk-status-pending{ background-color: var(--pk-gold-600); }
+.pk-status-cancelled{ background-color: var(--pk-maroon-700); }
+.pk-status-processing{ background-color: #6c8ebf; }

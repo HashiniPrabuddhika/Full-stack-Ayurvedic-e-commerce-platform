@@ -1,0 +1,35 @@
+.contact-form {
+  background-color: #fff;
+  border: 1px solid var(--pk-cream-300);
+  border-radius: var(--pk-radius);
+  box-shadow: var(--pk-shadow-soft);
+}
+
+.custom-input {
+  border-radius: 10px;
+  padding: 12px;
+  border: 1px solid var(--pk-cream-300);
+}
+
+.custom-input:focus{
+  border-color: var(--pk-green-600);
+  box-shadow: 0 0 0 0.2rem var(--pk-green-100);
+}
+
+.pk-contact-info-card{
+  background-color: #fff;
+  border: 1px solid var(--pk-cream-300);
+  border-radius: var(--pk-radius);
+  padding: 2rem 1.25rem;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.pk-contact-info-card:hover{
+  transform: translateY(-4px);
+  box-shadow: var(--pk-shadow-card);
+}
+
+.pk-contact-info-card i{
+  font-size: 1.8rem;
+  color: var(--pk-green-700);
+}

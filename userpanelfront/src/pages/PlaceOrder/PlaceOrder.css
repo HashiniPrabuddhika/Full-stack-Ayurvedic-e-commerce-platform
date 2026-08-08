@@ -1,0 +1,36 @@
+.pk-checkout-card,
+.pk-order-summary{
+  background-color: #fff;
+  border: 1px solid var(--pk-cream-300);
+  border-radius: var(--pk-radius);
+  box-shadow: var(--pk-shadow-soft);
+}
+
+.pk-order-summary{
+  background-color: var(--pk-cream-200);
+}
+
+.pk-payment-option{
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  border: 1px solid var(--pk-cream-300);
+  border-radius: 12px;
+  padding: 0.9rem 1rem;
+  cursor: pointer;
+  transition: border-color .15s ease, background-color .15s ease;
+}
+
+.pk-payment-option input{
+  margin-right: 0.2rem;
+}
+
+.pk-payment-option i{
+  font-size: 1.3rem;
+  color: var(--pk-green-700);
+}
+
+.pk-payment-option.active{
+  border-color: var(--pk-green-600);
+  background-color: var(--pk-green-100);
+}
